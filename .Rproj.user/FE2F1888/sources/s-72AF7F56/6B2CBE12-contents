@@ -1,0 +1,43 @@
+---
+title: "Brazil Gas Price"
+author: "Vinod"
+date: "July 14, 2019"
+output: html_document
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(here)
+#install.packages("fpp2")
+library(fpp2)
+library(mice)
+library(missForest)
+```
+
+```{r}
+brgp <- read.csv(here("Data","Brazilgasprice.csv"))
+#bgp <- here("Data","Brazilgasprice.tsv")
+#bbgp <- read.table(file = bgp, sep = '\t', header = TRUE)
+summary(brgp)
+```
+```{r}
+na.omit(brgp)
+```
+
+```{r}
+brgp %>% 
+  filter(State == "DISTRITO FEDERAL" & Kind.of.Product == "ETANOL HIDRATADO") %>% 
+  gather(Gas_Price, value = Value, 8:18) %>% 
+  spread(Month, value = Value) %>% 
+  filter(Gas_Price == "Mean.Market.Value") %>% 
+  ggplot(aes(x=Year))
+  
+  group_by(First.day.of.analyses.in.the.week, Last.day.of.analyses.in.the.week)
+```
+

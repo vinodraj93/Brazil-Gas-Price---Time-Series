@@ -1,0 +1,26 @@
+"0","#install.packages(""fpp2"")
+library(fpp2)
+"
+"2","package ‘fpp2’ was built under R version 3.6.1"
+"2","Loading required package: forecast
+"
+"2","package ‘forecast’ was built under R version 3.6.1"
+"2","Registered S3 method overwritten by 'xts':
+  method     from
+  as.zoo.xts zoo 
+"
+"2","Registered S3 method overwritten by 'quantmod':
+  method            from
+  as.zoo.data.frame zoo 
+"
+"2","Registered S3 methods overwritten by 'forecast':
+  method             from    
+  fitted.fracdiff    fracdiff
+  residuals.fracdiff fracdiff
+"
+"2","Loading required package: fma
+"
+"2","package ‘fma’ was built under R version 3.6.1"
+"2","Loading required package: expsmooth
+"
+"2","package ‘expsmooth’ was built under R version 3.6.1"

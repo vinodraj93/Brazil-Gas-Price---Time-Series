@@ -1,0 +1,27 @@
+---
+title: "Brazil Gas Price"
+author: "Vinod"
+date: "July 14, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(here)
+#install.packages("mice")
+library(mice)
+```
+
+```{r}
+brgp <- read.csv(here("Data","Brazilgasprice.csv"))
+#bgp <- here("Data","Brazilgasprice.tsv")
+#bbgp <- read.table(file = bgp, sep = '\t', header = TRUE)
+summary(brgp)
+```
+```{r}
+tempData <- mice(brgp,m=1,maxit```
+
